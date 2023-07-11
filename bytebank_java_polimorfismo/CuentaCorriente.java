@@ -7,4 +7,12 @@ public class CuentaCorriente extends Cuenta {
 		// TODO Auto-generated constructor stub
 	}
 	
+	//sobreescritura de metodos
+	@Override
+	public boolean retirar(double valor) {
+		double comision = 0.2;
+		// TODO Auto-generated method stub
+		return super.retirar(valor + comision);
+	}
+	
 }
