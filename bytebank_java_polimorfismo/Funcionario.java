@@ -1,7 +1,7 @@
 package bytebank_java_polimorfismo;
 
 //Clase número 3
-public class Funcionario {
+public abstract class Funcionario {//se le acaba de dar una nueva funcionalidad a Funcionario debido a que es clase abstracta y ya no se puede instanciar directamente
 	
 	private String nombre;
 	private String documento;
