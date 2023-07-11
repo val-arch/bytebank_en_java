@@ -2,7 +2,9 @@ package bytebank_java_polimorfismo;
 //clase numero 9
 public class TestControlBonificacion {
 	public static void main(String[] args) {
-		Funcionario diego = new Funcionario();
+		Funcionario diego = new Contador();//"Funcionario" Al ser clase abstracta no puede ser instanciada como tal,
+		//al ser abstracta es una representación conceptual pero no puede ser representacion fisica del objeto.
+		//Si quieres una instancia, tienes que darme una representacion fisica o real del objeto. entonces podemos elegir Contador o Gerente en lugar de "Funcionario"
 		diego.setSalario(2000);
 		/*Funcionario diego2 = new Funcionario();
 		diego2.setSalario(3000);*/
