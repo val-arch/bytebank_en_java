@@ -1,0 +1,8 @@
+¿Qué es Polimorfismo?
+En el mundo orientado a objetos, el polimorfismo permite que:
+
+Las referencias de tipos de clases más genéricos 
+referencian objetos más específicos.
+
+Vimos eso en el código, a través del ejemplo:
+Funcionario e = new Gerente();

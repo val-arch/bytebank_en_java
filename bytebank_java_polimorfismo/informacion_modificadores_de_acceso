@@ -1,0 +1,45 @@
+Modificadores de acceso:
+Los modificadores de acceso o accesibilidad son algunas 
+palabras claves utilizadas en el lenguaje Java para 
+definir el nivel de accesibilidad que los elementos de una 
+clase (atributos y métodos) e incluso la propia clase puede 
+tener los mismos elementos de otra clase.
+
+*Public:
+Este es el modificador menos restrictivo de todos. 
+De esta manera, cualquier componente puede acceder a 
+los miembros de la clase, las clases y las interfaces.
+
+*Protected:
+Al usar este modificador de acceso, los miembros de la 
+clase y las clases son accesibles para otros elementos 
+siempre que estén dentro del mismo package o, si pertenecen 
+a otros packages, siempre que tengan una relación extendida 
+(herencia), es decir, las clases secundarias pueden acceder 
+a los miembros de su clase principal (o clase de abuelos, etc.).
+
+*Private:
+Este es el modificador de acceso más restrictivo de todos. 
+Solo se puede acceder a los miembros definidos como privados 
+desde dentro de la clase y desde ningún otro lugar, 
+independientemente del paquete o la herencia.
+
+
+
+
+La palabra clave con menor visibilidad es private, 
+después viene protected y después public.
+
+*private - solo visible dentro de la clase.
+*protected - visible dentro de la clase y también para las hijas.
+*public - visible en todo lugar.
+
+También tenga en cuenta que protected está relacionado con la herencia.
+
+¿Cuál es la diferencia entre private y protected?
+Solo la propia clase en sí ve atributos/métodos private, mientras que 
+protected es visto por la propia clase más las clases hijas.
+
+Atributos y métodos protected pueden ser vistos por su propia 
+clase y sus hijas. Sin embargo, con private solo la clase en 
+sí ve los atributos/métodos.
