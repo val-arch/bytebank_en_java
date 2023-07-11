@@ -10,10 +10,17 @@ public class ControlBonificacion {
 		return this.suma;
 	}
 	
-	public double registrarSalario(Gerente gerente) {
+	/*public double registrarSalario(Gerente gerente) {
 		this.suma = gerente.getBonificacion() + this.suma;//"+ this.suma" suma la  bonificacion mas la suma actual
 		//es decir, dependiendo del numero de objetos que se instancien, se ira sumando, con la suma que se encuentre actualmente
 		System.out.println("Calculo actual: " + this.suma);//para ver en pantalla el resultado actual de este calculo
 		return this.suma;
 	}
+	
+	public double registrarSalario(Contador contador) {
+		this.suma = contador.getBonificacion() + this.suma;//"+ this.suma" suma la  bonificacion mas la suma actual
+		//es decir, dependiendo del numero de objetos que se instancien, se ira sumando, con la suma que se encuentre actualmente
+		System.out.println("Calculo actual: " + this.suma);//para ver en pantalla el resultado actual de este calculo
+		return this.suma;
+	}*/
 }

@@ -1,0 +1,31 @@
+Palabra reservada extends
+
+explicacion aplicada a partir de la //clase 10 . implica a las clases: Funcionario-ControlBonificacion-TestControlBonificacion-Contador
+
+nuestra clase base es Funcionario. Funcionario tiene todas propiedades y metodos base genericos.
+Las clases siguientes son: Gerente y Contador, las cuales usan la palabra reservada "extends".
+La clase Gerente solo tiene 1 sola propiedad y 3 metodos propios de la misma clase que no se ocuparan en ninguna otra clase.
+la clase Contador, solo esta creada sin propiedades ni metodos. Al igual que clase Gerente solo tiene la palabra reservada "extends".
+La palabra reservada "extends" proveniente del Polimorfismo que a su vez se debe a la Herencia. Permite heredar todas las propiedades y
+metodos de la clase madre Funconario.
+Por esta misma razón, en la clase ControlBonificacion que solo contiene 1 sola propiedad y un solo metodo(registrarSalario),
+el metodo compila perfectamente, y cuando en la clase TestControlBonificacion (que es una clase de prueba o testeo)
+se instancian o se crean objetos de tipo Funcionario-Gerente-Contador y ControlBonificacion, cuando instanciamos el objeto de
+cada una de las clases antes mencionadas, dentro del objeto "controlBonificacion" mandamos a llamar el metodo "registrarSalario" y
+le pasamos de parametro a cualquiera de los objetos ya instanciados de las clases Funcionario-Gerente-Contador, el metodo funciona
+y compila correctamente, debido a que estamos ocupandola herencia por medio de la palabra reservada "extends" (extends Funcionario) dentro de las clases:
+Gerente y Contador valga la redundancia (public class Gerente extends Funcionario{) (public class Contador extends Funcionario {),
+Ya que dentro de la clase ControlBonificacion el metodo de nombre "registrarSalario" (public double registrarSalario(Funcionario funcionario) {) 
+recibe de parametro a un funcionario de tipo Funcionario, es decir, objeto instanciado de la clase madre Funcionario. Debido a esto
+dentro de la clase ControlBonificacion basta con tener ese único método, sin necesidad de duplicarlo por el numero de veces, dependiendo
+de las clases nuevas que se fueran a crear, ejemplo: clase Diseñador, Guardia, Plomero, etc. Ya no se necesita duplicar el método
+registrarSalario y pasarle parametros de cada tipo clase distinta, ejemplo:
+(public double registrarSalario(Funcionario funcionario) {)
+(public double registrarSalario(Gerente gerente) {)
+(public double registrarSalario(Contador contador) {)
+(public double registrarSalario(Diseñador diseñador) {)
+(public double registrarSalario(Guardia guardia) {)
+(public double registrarSalario(Plomero plomero) {)
+etc.
+Ya solamente con un único metodo "registrarSalario(Funcionario funcionario)" en la clase ControlBonificacion, con eso basta para que se pueda ocupar
+para clases subsecuentes, siempre y cuando estas clase hereden de Funcionario
