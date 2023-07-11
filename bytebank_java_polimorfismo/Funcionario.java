@@ -38,6 +38,7 @@ public class Funcionario {
 	
 	// este metodo se sobreescribe en la clase Gerente
 	public double getBonificacion() {
+		System.out.println("Ejecutando desde clase madre FUNCIONARIO");
 			return this.salario * 0.05;
 			//si se modifica el porcentaje aquí, no afecta en las demas clases
 	}
