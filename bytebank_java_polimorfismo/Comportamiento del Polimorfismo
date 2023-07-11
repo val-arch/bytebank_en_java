@@ -1,0 +1,22 @@
+Comportamiento del Polimorfismo:
+
+
+Detectamos que la clase Funcionario tiene el método "getBonificacion" el cual se implementa 
+en las clases posteriores que se les aplica la Herencia con "extends", por ejemplo: a las clases Gerente-
+Contador.
+Pero observamos que Gerente tiene dentro de su clase el metodo "getBonificacion" (que esta sobreescrito)
+y que dentro de este metodo, esta invocando o llamandolos mediante el retorno a 2 metodos más con palabra reservada
+"super" (return super.getSalario() + super.getBonificacion()), esta llamando a los metodos "getSalario" y "getBonificacion" de la clase madre
+Funcionario, es decir decir, engloba a estos dos metodos dentro de su metodo propio sobreescrito "getBonificacion",
+el cual ya tendra un compartamiento diferente en comparación al metodo original que proviene de la clase madre Funcionario.
+
+De igual manera vemos que la clase Contador, sobreescribimos tambien el mismo método "getBonificacion",
+pero con diferente comportamiento, ya que aquí, se comporta de forma que solo retorna 200.
+
+Esta explicacion es para las clases Gerente y Contador, explicando cada una de ellas tiene el mismo metodo "getBonificacion" que extiende(proviene)
+de la clase madre Funcionario, pero con diferente comportamiento. en la clase Contador, vemos al mismo metodo, que se sobreescribe con la 
+anotación "@Override".
+Como nota:
+si una clase Hereda de la clase Funcionario con "extends", y si en esa clase hija no invoca el metodo "getBonificacion" y al instanciar la clase hija
+(ejemplo Contador) dentro de la clase TestControBonificacion mandas a llamar al metodo, debido a la Herencia, mandará a llamar al metodo más proximo,
+es decir, si la clase no tiene sobreescrito el metodo con su propio comportamiento, entonces tomará el de la clase madre Funcionario.
