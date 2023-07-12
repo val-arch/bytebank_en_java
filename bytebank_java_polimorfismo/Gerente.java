@@ -19,7 +19,8 @@ public class Gerente extends Funcionario{
 	// Sobreescritura de metodo (Proviene de la clase Funcionario)
 	public double getBonificacion() {//double
 		System.out.println("Ejecutando desde GERENTE");
-		return super.getSalario() + 
-				super.getBonificacion();
+		//modificamos debido a que el metodo se convirtio en abstract
+		return super.getSalario() +	this.getSalario() * 0.5;
 	}
+	
 }
