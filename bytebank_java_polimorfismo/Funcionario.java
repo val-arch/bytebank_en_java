@@ -2,7 +2,7 @@ package bytebank_java_polimorfismo;
 
 //Clase número 3
 public abstract class Funcionario {//se le acaba de dar una nueva funcionalidad a Funcionario debido a que es clase abstracta y ya no se puede instanciar directamente
-	
+	//clases abstractas No se pueden ser instanciadas. Para crear una instancia, primero debemos crear una clase hija no abstracta.
 	private String nombre;
 	private String documento;
 	private double salario;
@@ -36,12 +36,9 @@ public abstract class Funcionario {//se le acaba de dar una nueva funcionalidad 
 		this.salario = salario;
 	}
 	
-	// este metodo se sobreescribe en la clase Gerente
-	public double getBonificacion() {
-		System.out.println("Ejecutando desde clase madre FUNCIONARIO");
-			return this.salario * 0.05;
-			//si se modifica el porcentaje aquí, no afecta en las demas clases
-	}
+	// Este metodo se convierte en abstracto, antes no lo era.
+	//Como es abstracto, aquí no se implementa ni se puede. Se implementara en las clases hijas(Clases: Contador,Gerente)
+	public abstract double getBonificacion();
 
 	public int getTipo() {
 		return tipo;
@@ -51,5 +48,8 @@ public abstract class Funcionario {//se le acaba de dar una nueva funcionalidad 
 		this.tipo = tipo;
 	}
 	
+	/*
+	 * Nota: en la clase abstracta podemos definir metodos abstractos, 
+	 * los cuales solo se crean pero no se implementan, dentro de la misma clase abstracta*/
 
 }
