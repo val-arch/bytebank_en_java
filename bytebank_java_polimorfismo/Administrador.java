@@ -1,22 +1,9 @@
 package bytebank_java_polimorfismo;
+
 //clase 16
-public class Administrador extends Funcionario {
+//con "extends" solo puede extender el hijo de un solo padre(padre muchos hijo/hijo un solo padre)
+public class Administrador extends FuncionarioAutenticable {
 	
-	private String clave;
-
-	/*public String getClave() {
-		return clave;
-	}*/
-
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-	
-	public boolean iniciarSesion(String clave) {
-		return clave == "AluraCursosOnLine";
-	}
-
-	@Override
 	public double getBonificacion() {
 		// TODO Auto-generated method stub
 		return 0;
