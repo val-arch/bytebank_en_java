@@ -1,12 +1,25 @@
 package bytebank_java_polimorfismo;
 // clase 11
-public class Cuenta {
-	private double saldo;//atributo
+/*una clase puede tener campos y puede tambien referenciar 
+ * objetos No Abstractos (como: private Cliente titular = new Cliente();)
+ * puede tener elementos estaticos .
+ * Puede tener constructores por defecto y constructores personalizados
+ * puede tener metodos concretos / metodos reales / getters y setter
+ * La clase NO PUEDE ser INSTANCIADA por SÍ sola , tiene que ser INSTANCIADA con una implementación real /
+ * una clase que extienda de esta clase Abstracta llamada Cuenta, es decir una clase hija de Cuenta.
+ * la Clase abstracta, permite que las clases hijas accedan a sus atributos(siempre y cuando los atributos esten declarados como PROTECTED dentro de la clase abstracta, si se declaran PRIVATE no se podran acceder)
+ * la clase abstracta puede tener metodos abstractos, solamente que no se puede implementar(es decir, no deben de tener cuerpo)
+ * solo pueden existir metodos abstractos en clases abstractas. no pueden existir metodos abstractas en clases no abstractas
+ * nota: las clases hijas normales que provienen de la clase abstracta(madre) ES OBLIGATORIO que implementen los metodos abstractos de la clase abstracta (madre) de la que extienden
+ * */
+public abstract class Cuenta {
+	
+	protected double saldo;//atributo
     private int agencia;//atributo
     private int numero;//atributo
-    private Cliente titular = new Cliente();//atributo
+    private Cliente titular = new Cliente();//atributo . Se referencia objetos no abstractos
     
-    private static int total;//La variable "static" no será de la INSTANCIA solo será de la CLASE
+    private static int total;//(es un elemento estatico)La variable "static" no será de la INSTANCIA solo será de la CLASE
     
        
     //Nota: al crear este constructor y personalizarlo
@@ -30,9 +43,8 @@ public class Cuenta {
     }
     
     //No retorna valor: "public void"
-    public void depositar(double valor){
-    	this.saldo += valor;
-    }
+    //Se convierte en metodo abstracto - antes no lo era
+    public abstract void depositar(double valor);
     
     //Retorna valor: "public boolean/int/String/char"
     public boolean retirar(double valor) {
