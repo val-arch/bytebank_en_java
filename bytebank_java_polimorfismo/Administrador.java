@@ -4,6 +4,7 @@ package bytebank_java_polimorfismo;
 //con "extends" solo puede extender el hijo de un solo padre(padre muchos hijo/hijo un solo padre)
 public class Administrador extends FuncionarioAutenticable {
 	
+	@Override
 	public double getBonificacion() {
 		// TODO Auto-generated method stub
 		return 0;
