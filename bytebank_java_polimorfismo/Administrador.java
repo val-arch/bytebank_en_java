@@ -11,22 +11,29 @@ package bytebank_java_polimorfismo;
 //Aquí entra la importancia de que no se pueda extender de mas de una clase
 public class Administrador extends Funcionario implements Autenticable {
 	
+	private String clave; // implementamos atributo
+	
 	@Override
 	public double getBonificacion() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.getSalario();// implementamos el método
 	}
 
 	@Override
 	public void setClave(String clave) {
-		// TODO Auto-generated method stub
-		
+		this.clave = clave;// implementamos el método
 	}
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.clave == clave;
 	}
+		/*Opcion 1 válida para implementar el método iniciarSesion: return this.clave == clave;
+		 * 
+		 * Opcion 2 válida para implementar el método iniciarSesion:
+		 * if (this.clave == clave) { 
+			return true;
+		}
+		return false;
+	}*/
 
 }
