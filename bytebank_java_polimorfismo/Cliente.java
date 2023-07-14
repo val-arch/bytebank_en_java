@@ -11,6 +11,8 @@ public class Cliente implements Autenticable {//nuestra clase Cliente se vuelve 
 	private String nombre;
 	private String documento;
 	private String telefono;
+	
+	private String clave;//para settear la contraseña
 
 	public String getNombre() {
 		return nombre;
@@ -39,13 +41,20 @@ public class Cliente implements Autenticable {//nuestra clase Cliente se vuelve 
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		// TODO Auto-generated method stub
-		return false;
+		return this.clave == clave;
 	}
+		/*Opcion 1 válida para implementar el método iniciarSesion: return this.clave == clave;
+		 * 
+		 * Opcion 2 válida para implementar el método iniciarSesion:
+		 * if (this.clave == clave) { 
+			return true;
+		}
+		return false;
+	}*/
 	
 	@Override
 	public void setClave(String clave) {
-		// TODO Auto-generated method stub
+		this.clave = clave;// implementamos el método
 	}	
 	
 	
