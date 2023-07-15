@@ -12,7 +12,15 @@ public class Cliente implements Autenticable {//nuestra clase Cliente se vuelve 
 	private String documento;
 	private String telefono;
 	
-	private String clave;//para settear la contraseña
+	private AutenticacionUtil util;
+	
+	//eliminamos atributo clave por que nadie lo esta usando(desacoplamos completamente la lógica de autenticación e inicio de sesión de mis objetos de negocio): private String clave;//atributo para settear la contraseña
+	
+	//Constructor de cliente
+	public Cliente() {
+		//inicializando por defecto AutenticacionUtil en cada clase Util
+		this.util = new AutenticacionUtil();// composición de objetos
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -41,7 +49,7 @@ public class Cliente implements Autenticable {//nuestra clase Cliente se vuelve 
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		return this.clave == clave;
+		return this.util.iniciarSesion(clave);//nueva implementacion a partir de clase AutenticacionUtil. El código que habia aquí ya pasa a la clase util
 	}
 		/*Opcion 1 válida para implementar el método iniciarSesion: return this.clave == clave;
 		 * 
@@ -54,7 +62,7 @@ public class Cliente implements Autenticable {//nuestra clase Cliente se vuelve 
 	
 	@Override
 	public void setClave(String clave) {
-		this.clave = clave;// implementamos el método
+		this.setClave(clave);// implementamos el método
 	}	
 	
 	
