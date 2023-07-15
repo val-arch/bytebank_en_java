@@ -17,6 +17,7 @@ public abstract class Cuenta {
 	protected double saldo;//atributo
     private int agencia;//atributo
     private int numero;//atributo
+    //instanciamos un Cliente y lo inicialisamos como un cliente vacio. Se hizo para que el cliente nunca inicie con null. (composición de objetos, un objeto dentro de otro, y es inicializado automaticamente)
     private Cliente titular = new Cliente();//atributo . Se referencia objetos no abstractos
     
     private static int total;//(es un elemento estatico)La variable "static" no será de la INSTANCIA solo será de la CLASE
