@@ -1,5 +1,6 @@
 package bytebank_java_polimorfismo;
 //clase 17
+//La lógicade como inicio sesion
 public class SistemaInterno {
 	
 	private String clave = "AluraCursosOnLine";
