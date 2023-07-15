@@ -1,5 +1,6 @@
 package bytebank_java_polimorfismo;
 //clase 18
+//quien marca si soy elegible o no para entrar-salir: interface Autenticable
 //se elimina la palabra reserva "abstract" (por buenas practicas) del nombre de la interface Autenticable, deido a que todas las "interfaces" por default son abstractas y ya viene implicito
 //antes estaba así: public abstract interface Autenticable extends Funcionario { // ahora queda así: public abstract interface Autenticable extends Funcionario {
 //nota: una interfaz no puede extender de una clase, solo de otra interfaz
