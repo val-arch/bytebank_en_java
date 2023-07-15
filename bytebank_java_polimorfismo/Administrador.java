@@ -11,7 +11,12 @@ package bytebank_java_polimorfismo;
 //Aquí entra la importancia de que no se pueda extender de mas de una clase
 public class Administrador extends Funcionario implements Autenticable {
 	
-	private String clave; // implementamos atributo
+	private AutenticacionUtil util; // implementamos atributo. se quita: String clave se reemplaza por clase AtenticacionUtil
+	
+	//constructor
+	public Administrador() {
+		this.util = new AutenticacionUtil();
+	}
 	
 	@Override
 	public double getBonificacion() {
@@ -20,12 +25,12 @@ public class Administrador extends Funcionario implements Autenticable {
 
 	@Override
 	public void setClave(String clave) {
-		this.clave = clave;// implementamos el método
+		this.util.setClave(clave);// implementamos el método (antes: this.clave = clave;)
 	}
 
 	@Override
 	public boolean iniciarSesion(String clave) {
-		return this.clave == clave;
+		return this.util.iniciarSesion(clave);// antes: return this.clave == clave;
 	}
 		/*Opcion 1 válida para implementar el método iniciarSesion: return this.clave == clave;
 		 * 
